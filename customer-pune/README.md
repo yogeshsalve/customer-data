@@ -1,4 +1,4 @@
-# AngularJS Phone Catalog Tutorial Application
+# AngularJS Customer Data Application
 
 
 ## Overview
