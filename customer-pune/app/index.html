@@ -1,0 +1,71 @@
+<!DOCTYPE html>    
+ <html>    
+ <head>    
+   <title>Customer Details</title> 
+   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>    
+   <script type="text/javascript" src="customerController.js"></script>    
+ </head> 
+ 
+
+ <!-- <body ng-app="customerApp"> -->    
+  <body ng-app="customerApp">
+   <div align="center"><h2>Customer Information</h2></div><br>     
+   <form>  
+   <div ng-controller="customerCtrl1"> 
+
+   	<b>Id:</b><input type="text" ng-model="myData.id"> 
+   	<b>uuid:</b><input type="text" ng-model="myData.uuid">
+   	<b>Version:</b><input type="text" ng-model="myData.version">
+   	<b>Name:</b><input type="text" ng-model="myData.name">
+   	<b>Display:</b><input type="text" ng-model="myData.displayName">
+   	<b>desc:</b><input type="text" ng-model="myData.desc">
+   </div>
+   <hr>
+	<div ng-controller="customerCtrl">
+     <table align="center" border="1">    
+       <tr>    
+         <th>AttributeId</th>    
+         <th>DisplaySeq</th>    
+         <th>Name</th>    
+         <th>Type</th>    
+         <th>Desc</th>    
+         <th>Expression</th>  
+         <th>Key</th>    
+         <th>Partition</th>    
+         <th>DispName</th>    
+         <th>Active</th>    
+         <th>Length</th>    
+         <th>AttrUnitType</th> 
+         <th>Domain</th>    
+         <th>PiiFlag</th>    
+         <th>CdeFlag</th>    
+         <th>Precision</th>    
+         <th>Scale</th>    
+         <th>NullFlag</th>  
+       </tr>    
+       <tr ng-repeat="customer in customers">    
+         <td>{{customer.attributeId}}</td>    
+         <td>{{customer.displaySeq}}</td>    
+         <td>{{customer.name}}</td>    
+         <td>{{customer.type}}</td>    
+         <td>{{customer.desc}}</td>
+         <td>{{customer.expression}}</td>    
+         <td>{{customer.key}}</td>    
+         <td>{{customer.partition}}</td>    
+         <td>{{customer.dispName}}</td>    
+         <td>{{customer.active}}</td>
+         <td>{{customer.length}}</td>    
+         <td>{{customer.attrUnitType}}</td>    
+         <td>{{customer.domain}}</td>    
+         <td>{{customer.piiFlag}}</td>    
+         <td>{{customer.cdeFlag}}</td> 
+         <td>{{customer.precision}}</td>
+         <td>{{customer.scale}}</td>
+         <td>{{customer.nullFlag}}</td>   
+            
+       </tr>    
+     </table>    
+   </div> 
+   </form>   
+ </body>    
+ </html>  
